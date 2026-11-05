@@ -6,6 +6,7 @@ A git-backed, LLM-maintained reading graph. You write one note per paper; the ag
 `git init && git add -A && git commit -m "scaffold"`
 
 ## Daily loop
+0. (optional) Pick the next `[ ]` paper from a queue in `reading-lists/`.
 1. `cp templates/paper-note.md papers/YYYY-shortname.md` (YYYY = publication year; filename = paper id)
 2. Fill in your 90-second take. Touch nothing else.
 3. In Claude Code, in this repo: **"ingest"**
@@ -23,4 +24,5 @@ In Claude Code: **"compact"**. Review its proposal, confirm, commit separately.
 - `meta/edges.md` — the graph (typed edges)
 - `topics/` — synthesis pages
 - `meta/tags.md` — canonical tags + aliases + topic list
+- `reading-lists/` — queued papers with pre-read summaries and candidate edges (agent ticks them off on ingest)
 - `CLAUDE.md` — the agent's contract
